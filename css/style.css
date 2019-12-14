@@ -1,0 +1,241 @@
+/*========== CSS RESET ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%; /* DÚVIDA, por que 100% ? o que isso faz? é uma pratica ruim?  */
+  border: none;
+  outline: none; /* http://www.outlinenone.com/ */
+  font-weight: 300;
+  box-sizing: border-box; /* quando utilizar um padding, não vai alterar a dimensão do elemento */
+  font-family: 'Lato', sans-serif;
+}
+body{background-color: #f5f5f5;}
+a{text-decoration: none;}
+ul{list-style: none;}
+img{max-width: 100%;}
+
+/*========== CABEÇALHO ==========*/
+.cabecalho {
+  width: 100%;
+  float: left; /* DEPOIS FAZER TESTE RETIRANDO O FLOAT */
+  padding: 3% 4%;
+  /*border: 1px solid red;*/
+}
+
+.logo {
+  /*border: 1px solid blue;*/
+  width: 56px;
+  height: 56px;
+  float: left; /* DEPOIS FAZER TESTE RETIRANDO O FLOAT */
+  background: url(../img/logo-mobile.png) center center/56px no-repeat; /* center center é a posição, ajustamos o tamanho da imagem usando /56px para a imagem não perder a qualidade, pois a mesma é maior que o espaço que temos */
+  font-size: 0; /* para não aparecer o texto do html, o texto vai aparecer quando a tela aumentar de tamanho, por enquanto vamos esconde-lo */
+}
+
+.btn-menu {
+  width: 56px;
+  height: 56px;
+  float: right;
+  text-align: center;
+  color: white;
+  border-radius: 56px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ce2e3c, #da6709);
+}
+
+/*========== MENU ==========*/
+.menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.9);
+  top: 0;
+  left: 0;
+}
+
+.btn-close {
+  font-size: 1.5em;
+  color: #fff;
+  float: right;
+  cursor: pointer;
+  margin: 2% 3% 0 0;
+}
+
+.menu ul {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.menu li {
+  padding: 1.5%;
+}
+
+.menu li a {
+  font-size: 2em;
+  color: white;
+  padding: 1.5% 3%;
+}
+
+.menu li a:hover {
+  border: 1px solid #da6709;
+}
+
+/*========== BANNER / BOTÕES ==========*/
+.banner {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 3% 4%;
+  background: url(../img/bg.jpg) no-repeat fixed;
+}
+
+.title {
+  width: 100%;
+}
+
+.title h2 {
+  font-size: 2.5em;
+  color: white;
+  font-weight: 700;
+}
+
+.title h3 {
+  font-size: 1.5em;
+  color: white;
+}
+
+.buttons {
+  width: 100%;
+}
+
+.buttons i {
+  float: right;
+}
+
+.btn-cadastrar {
+  width: 100%;
+  font-size: 1.5em;
+  text-align: left;
+  cursor: pointer;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: white;
+  color: #130400;
+  margin-top: 2%;
+}
+
+.btn-sobre {
+  width: 100%;
+  font-size: 1.5em;
+  text-align: left;
+  cursor: pointer;
+  padding: 5%;
+  border-radius: 10px;
+  background-color: #130400;
+  color: white;
+  margin-top: 2%;
+}
+
+/*========== SERVIÇOS / PARÁGRAFOS ==========*/
+.servicos {
+  width: 100%;
+  float: left;
+  padding: 3% 4%;
+}
+
+.servico {
+  width: 100%;
+  background-color: white;
+  text-align: left;
+  border-radius: 7px;
+  margin-bottom: 3%;
+}
+
+.servico img {border-radius: 7px 7px 0 0;}
+
+.inner {padding: 5%;}
+
+.inner a {
+  font-size: 1.5em;
+  color: #130400;
+  font-weight: 700;
+}
+
+.inner h4 {
+  font-size: 1.2;
+  color: #130400;
+  margin-top: 2%;
+}
+
+.inner p {
+  margin-top: 5%;
+  color: #130400;
+  line-height: 1.5em;
+}
+
+/*========== NEWSLETTER ==========*/
+.newsletter{
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 3% 4%;
+  background-color: #130400;
+}
+
+.newsletter h2 {
+  font-size: 1.5;
+  color: white;
+  font-weight: 700;
+}
+
+.newsletter h3 {color: white;}
+
+.newsletter form {margin-top: 2%;}
+
+.newsletter input {
+  width: 100%;
+  background-color: #130400;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 5%;
+  border-radius: 5px; 
+}
+
+.newsletter button {
+  width: 100%;
+  background-color: white;
+  color: #130400;
+  padding: 5%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+/*========== RODAPÉ ==========*/
+.rodape {
+  width: 100%;
+  float: left;
+  padding: 3% 4%;
+  text-align: center;
+  background: linear-gradient(to right, #ce2e3c, #da6709);
+}
+
+.social-icons a {
+  font-size: 1.5em;
+  color: rgba(255,255,255,0.7);
+  margin-right: 3%;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  color: rgba(255,255,255);
+}
+
+.copyright {
+  margin-top: 2%;
+  color: rgba(255,255,255,0.7);
+}
